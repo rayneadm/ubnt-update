@@ -350,6 +350,7 @@ sudo systemctl restart nginx
 ### `example/conf/nginx/stream.d/stream-ubnt.conf`
 - fw-download.ubnt.com
 - fw-download.ui.com
+- static.ubnt.com
 
 ### `example/conf/nginx/stream.d/stream-ubnt-only-dl.conf`
 - fw-download.ubnt.com
@@ -357,6 +358,7 @@ sudo systemctl restart nginx
 - apt.artifacts.ui.com
 - apt-release-candidate.artifacts.ui.com
 - apt-beta.artifacts.ui.com
+- static.ubnt.com
 
 ### `example/conf/nginx/stream.d/stream-all.conf`
 - fw-download.ubnt.com
@@ -366,6 +368,7 @@ sudo systemctl restart nginx
 - apt.artifacts.ui.com
 - apt-release-candidate.artifacts.ui.com
 - apt-beta.artifacts.ui.com
+- static.ubnt.com
 
 ### `example/conf/nginx/stream.d/stream-ubnt-all-with-logging.conf`
 - fw-download.ubnt.com
@@ -375,9 +378,14 @@ sudo systemctl restart nginx
 - apt.artifacts.ui.com
 - apt-release-candidate.artifacts.ui.com
 - apt-beta.artifacts.ui.com
+- static.ubnt.com
+
 > ⚠️ **Заметка к файлу конфигурации стрима stream-ubnt-all-with-logging.conf:**  
 > Стрим с включённым логированием.
 
 
 > ⚠️ **Примечание:**  
 > Заворачивать домены `fw-update.ubnt.com` и `fw-update.ui.com` в стрим можно, но **не имеет смысла** — эти домены не заблокированы, и **Network Application** получает сведения об обновлениях напрямую.
+
+> ⚠️ **Примечание:**  
+> Домен `static.ubnt.com` заворачивается в стрим для корректного отображения иконок при их выборе для клиентов.
